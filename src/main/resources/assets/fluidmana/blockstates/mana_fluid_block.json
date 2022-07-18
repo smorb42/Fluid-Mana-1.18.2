@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "fluidmana:block/mana_fluid_block"}
+  }
+}

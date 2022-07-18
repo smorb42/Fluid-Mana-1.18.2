@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "fluidmana:mana_flowing",
+    "fluidmana:mana_fluid"
+  ]
+}

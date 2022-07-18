@@ -1,6 +1,8 @@
 package com.smorb42.FluidMana.block;
 
 import com.smorb42.FluidMana.FluidMana;
+import com.smorb42.FluidMana.block.custom.ConverterBlock;
+import com.smorb42.FluidMana.block.custom.ConverterPoolBlock;
 import com.smorb42.FluidMana.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,7 +22,12 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FluidMana.MOD_ID);
 
-
+    public static final RegistryObject<Block> CONVERTER_POOL_BLOCK = registerBlock("converter_pool_block",
+            () -> new ConverterPoolBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+    public static final RegistryObject<Block> CONVERTER_BLOCK = registerBlock("converter_block",
+            () -> new ConverterBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
 
     public static final RegistryObject<Block> MANA_FLUID_BLOCK = registerBlock("mana_fluid_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
